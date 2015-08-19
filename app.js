@@ -22,7 +22,7 @@ var app = express();
 
 // Connect to mongoose
 var db_name = 'blog';
-var connectionString = process.env.OPENSHIFT_MONGO_DB_URL + process.env.OPENSHIFT_NODEJS || 'mongodb://localhost/myblog10';
+var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/myblog10';
 
 mongoose.connect(connectionString, function(err) {
     if (err) {
