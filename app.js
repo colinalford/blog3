@@ -24,7 +24,11 @@ var app = express();
 var db_name = 'blog';
 var connectionString = process.env.OPENSHIFT_MONGO_DB_URL || 'mongodb://localhost/myblog10';
 
-mongoose.connect(connectionString);
+mongoose.connect(connectionString, function(err) {
+    if (err) {
+        console.log(err);
+    }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
