@@ -18,7 +18,9 @@ router.post('/signup', function(req, res) {
     user.password = user.generateHash(req.body.password);
 
     user.save(function(err) {
-        if (err) {res.send(err);}
+        if (err) {
+            console.log(err);
+            return req.res.redirect('/api/users/signup');}
         res.redirect('/');
     })
 });

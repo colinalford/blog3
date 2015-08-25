@@ -22,12 +22,18 @@ var app = express();
 
 // Connect to mongoose
 var db_name = 'blog';
-var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/myblog10';
+var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/myblog5';
 
 mongoose.connect(connectionString, function(err) {
     if (err) {
         console.log(err);
     }
+});
+
+mongoose.connect(connectionString, function(err) {
+  if (err) {
+    console.log(err);
+  }
 });
 
 // view engine setup
@@ -48,7 +54,6 @@ app.use(attachAuthenticationStatus);
 app.use(express.static(path.join(__dirname, 'public')));
 
 passportConfig();
-
 
 app.use('/', routes);
 app.use('/api/users', users);
