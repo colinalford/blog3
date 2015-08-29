@@ -275,6 +275,10 @@ aside img {
     header {
         position: absolute;
     }
+
+    .blog-post .body, .comment-body {
+        text-align: justify;
+    }
 }
 
 @media (min-width: 1119px) {
