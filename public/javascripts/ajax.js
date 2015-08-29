@@ -31,8 +31,6 @@
                 var text = element.body;
                 var preview = text.split(' ').slice(0,100).join(' ') + ' <strong>.  .  . </strong><em>Click to read more</em>';
 
-                console.log(preview);
-
                 $('#lastPostsLoader').append('<div class="blog-post" id="'+element.created_at+'"></div>');
                 var $last = $('.blog-post:last');
                 $last.append('<h2 id="'+element._id+'"class="title">'+element.title+'</h2>');
