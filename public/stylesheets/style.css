@@ -233,29 +233,30 @@ main {
 }
 
 aside {
-    position: absolute;
-    margin-left: 7%;
-    margin-right:5%;
-    left: 1100px;
-    top: 50px;
+    text-align: center;
+    margin-top: 2%;
 }
 
 aside h3 {
-    text-align: center;
-    font-family: "Courier New", Courier, monospace;
+    margin-bottom: 2%;
+    font-family: "Courier", monospace;
 }
 
-aside img {
-    display: block;
-    max-width: 250px;
-    height: auto;
+#my-picture {
+    width: 200px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1em;
+    margin-bottom: 2%;
+    border-radius: 100px;
+    background: url('../images/me_chair.jpg') no-repeat;
 }
 
-.hidden-block {
-    display: none;
+aside div.about {
+    text-align: justify;
+    width: 89%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #freepik {
@@ -269,6 +270,32 @@ aside img {
     }
 }
 
+@media (min-width: 550px) and (max-width: 1600px) {
+    aside {
+        position: relative;
+    }
+
+    #my-picture {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin-left: 5%;
+        border-radius: 100px;
+        background: url('../images/me_chair.jpg') no-repeat;
+    }
+
+    aside div.about {
+        position: relative;
+        display: inline-block;
+        text-align: justify;
+        width: 50%;
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+}
+
 @media (max-width: 800px) {
     header {
         position: absolute;
@@ -279,8 +306,12 @@ aside img {
     }
 }
 
-@media (min-width: 800px) {
-
+@media (min-width: 850px) {
+    aside {
+        width: 813px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (min-width: 1119px) {
@@ -291,14 +322,24 @@ aside img {
     }
 }
 
-@media (min-width: 1480px) {
+@media (min-width: 1600px) {
     .blog-post, #comments {
         width: 1062px;
         margin-left: 5%;
         margin-right: auto;
     }
 
-    .hidden-block {
-        display: block;
+    aside {
+        position: absolute;
+        left: 1100px;
+        top: 0;
+        margin-left: 9%;
+        margin-right:5%;
+        width: auto;
     }
+
+    aside .about {
+        max-width: 360px;
+    }
+
 }
