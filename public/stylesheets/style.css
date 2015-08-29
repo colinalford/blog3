@@ -116,11 +116,13 @@ header {
 }
 
 .title-div {
-    background-color: #292828;
     text-align: center;
     clear: both;
     position: relative;
-    color: #EFEEED;
+    color: #292828;
+    align-content: white;
+    z-index: 800;
+    background: white;
 }
 
 .link-container {
@@ -129,7 +131,7 @@ header {
 }
 
 .link-container h1 {
-    color: #EFEEED;
+    color: #292828;
 }
 
 .login-container {
@@ -197,7 +199,7 @@ main {
 }
 
 .comment-container {
-    margin-top: 1%;
+    margin-top: 5%;
     margin-bottom: 4%;
 }
 
@@ -240,6 +242,7 @@ aside {
 
 aside h3 {
     text-align: center;
+    font-family: "Courier New", Courier, monospace;
 }
 
 aside img {
