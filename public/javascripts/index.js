@@ -29,7 +29,7 @@ $(window).scroll(function() {
         // endOfPage and, if not, it renders HTML from JSON result.
         Blogs.getBlogs(lastItem).done(function(result){
             if (result.length === 0) {
-                $('#lastPostsLoader').append('<hr/><div class="blog-post end-content">End Of Content</div>');
+                $('#lastPostsLoader').append('<div class="blog-post end-content">End Of Content</div>');
                 Blogs.endOfPage = true;
             }
             if (Blogs.endOfPage !== true && result[0] !== undefined) {
