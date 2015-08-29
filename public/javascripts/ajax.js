@@ -28,12 +28,17 @@
                 // Grabs date for formatting
                 var date = new Date(element.created_at);
 
+                var text = element.body;
+                var preview = text.split(' ').slice(0,100).join(' ') + ' <strong>.  .  . </strong><em>Click to read more</em>';
+
+                console.log(preview);
+
                 $('#lastPostsLoader').append('<div class="blog-post" id="'+element.created_at+'"></div>');
                 var $last = $('.blog-post:last');
                 $last.append('<h2 id="'+element._id+'"class="title">'+element.title+'</h2>');
                 $last.append('<hr/>');
                 $last.append('<div class="date">'+date.toLocaleString()+'</div>');
-                $last.append('<div class="body">'+element.body+'</div>');
+                $last.append('<div class="body">'+preview+'</div>');
                 $last.append('<a href="/api/blog/'+element._id+'"><span class="link-spanner"></span></a>');
             });
         }

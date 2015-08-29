@@ -161,11 +161,6 @@ main {
     margin-top: 3%;
 }
 
-#lastPostsLoader .blog-post:hover {
-    border-color: gray;
-    box-shadow: 0 0 20px gray;
-}
-
 .blog-post .title {
     text-align: left;
     margin-bottom: .5em;
@@ -281,11 +276,20 @@ aside img {
     }
 }
 
+@media (min-width: 800px) {
+
+}
+
 @media (min-width: 1119px) {
     .blog-post, #comments {
         width: 1062px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #lastPostsLoader .blog-post:hover {
+        border-color: gray;
+        box-shadow: 0 0 20px gray;
     }
 }
 
