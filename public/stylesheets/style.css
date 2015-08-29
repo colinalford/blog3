@@ -150,6 +150,10 @@ main {
     top: 149px;
 }
 
+#lastPostsLoader {
+    clear: both;
+}
+
 .blog-post, #comments, .form_area {
     width: 90%;
     margin: 2%;
@@ -235,6 +239,7 @@ main {
 aside {
     text-align: center;
     margin-top: 2%;
+    clear: both;
 }
 
 aside h3 {
@@ -270,7 +275,7 @@ aside div.about {
     }
 }
 
-@media (min-width: 550px) and (max-width: 1600px) {
+@media (min-width: 500px) and (max-width: 1600px) {
     aside {
         position: relative;
     }
@@ -278,21 +283,15 @@ aside div.about {
     #my-picture {
         position: relative;
         display: inline-block;
-        float: left;
-        width: 200px;
-        height: 200px;
-        margin-left: 5%;
-        border-radius: 100px;
-        background: url('../images/me_chair.jpg') no-repeat;
+        float: right;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
     aside div.about {
         position: relative;
         display: inline-block;
-        text-align: justify;
-        width: 50%;
-        margin-left: 2%;
-        margin-right: 5%;
+        width: 45%
     }
 }
 
@@ -306,9 +305,9 @@ aside div.about {
     }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 672px) {
     aside {
-        width: 813px;
+        width: 650px;
         margin-left: auto;
         margin-right: auto;
     }
