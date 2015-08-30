@@ -15,6 +15,10 @@ time, mark, audio, video {
     padding: 0;
 }
 
+html {
+    margin-bottom: 1px;
+}
+
 body {
     font-size: 1em;
     /*background-color: #EFEEED;*/
@@ -237,20 +241,29 @@ main {
 }
 
 aside {
+    position: relative;
     text-align: center;
+    background-color: #FCFCFC;
     margin-top: 2%;
     margin-bottom: 8%;
-    clear: both;
+    padding-bottom: 1%;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 aside h3 {
     margin-bottom: 2%;
+    padding-top: 2%;
     font-family: "Courier", monospace;
 }
 
 #my-picture {
     width: 200px;
     height: 200px;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 7px 5px 0px rgba(50, 50, 50, 0.75);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2%;
@@ -282,9 +295,16 @@ aside div.about {
     }
 }
 
-@media (min-width: 510px) and (max-width: 1600px) {
+@media (min-width: 510px) {
+    aside {
+
+    }
+}
+
+@media (min-width: 510px) and (max-width: 1629px) {
     aside {
         position: relative;
+        height: 250px;
     }
 
     #my-picture {
@@ -302,6 +322,16 @@ aside div.about {
     }
 }
 
+@media (min-width: 672px) {
+    aside {
+        width: 650px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 @media (max-width: 800px) {
     header {
         position: absolute;
@@ -309,14 +339,6 @@ aside div.about {
 
     .blog-post .body, .comment-body {
         text-align: justify;
-    }
-}
-
-@media (min-width: 672px) {
-    aside {
-        width: 650px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -328,7 +350,7 @@ aside div.about {
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1630px) {
     .blog-post, #comments {
         width: 1062px;
         margin-left: 5%;
@@ -339,7 +361,7 @@ aside div.about {
         position: absolute;
         left: 1100px;
         top: 0;
-        margin-left: 9%;
+        margin-left: 13%;
         margin-right:5%;
         margin-top: 0;
         margin-bottom: 0;
@@ -348,6 +370,7 @@ aside div.about {
 
     aside .about {
         max-width: 360px;
+        text-align: left;
     }
 
 }
